@@ -13,11 +13,11 @@ class Calculator extends PersistentComponent {
     }
 
     onKmhChange(value) {
-        this.setState({kmh: value, mph: this.kmhToMph(value)})
+        this.setState({ kmh: value, mph: this.kmhToMph(value) })
     }
 
     onMphChange(value) {
-        this.setState({kmh: this.mphToKmh(value), mph: value})
+        this.setState({ kmh: this.mphToKmh(value), mph: value })
     }
 
     mphToKmh(value) {
@@ -30,20 +30,20 @@ class Calculator extends PersistentComponent {
 
     convert(value, multiple) {
         const float = parseFloat(value)
-        if(isNaN(float)) {
+        if (isNaN(float)) {
             return ''
         }
         return float * multiple
     }
 
-  render() {
-    return (
-        <form >
-            <CalculatorElement name="kmh" title="Km/h" value={this.state.kmh} onChange={this.onKmhChange} />
-            <CalculatorElement name="mph" title="Mph" value={this.state.mph} onChange={this.onMphChange} /> 
-        </form>
-    );
-  }
+    render() {
+        return (
+            <form >
+                <CalculatorElement name="kmh" title="Km/h" value={this.state.kmh} onChange={this.onKmhChange} />
+                <CalculatorElement name="mph" title="Mph" value={this.state.mph} onChange={this.onMphChange} />
+            </form>
+        );
+    }
 }
 
 export default Calculator;

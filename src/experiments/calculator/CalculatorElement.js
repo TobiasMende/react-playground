@@ -8,7 +8,7 @@ class CalculatorElement extends Component {
     }
 
     onChange(e) {
-        if(!this.isValid(e)) {
+        if (!this.isValid(e)) {
             return;
         }
         const value = e.target.value
@@ -24,7 +24,7 @@ class CalculatorElement extends Component {
         return (
             <div className="form-group" >
                 <label htmlFor={this.props.name}>{this.props.title}</label>
-                <input type="text" className="form-control" name={this.props.name} value={this.props.value} onChange={this.onChange}/>
+                <input type="text" className="form-control" name={this.props.name} value={this.props.value} onChange={this.onChange} />
             </div>
         );
     }

@@ -24,7 +24,7 @@ class PersistentComponent extends Component {
     }
 
     hydrateStateFromLocalStorage() {
-        if(localStorage.hasOwnProperty(this.localStorageKey())) {
+        if (localStorage.hasOwnProperty(this.localStorageKey())) {
             const value = localStorage.getItem(this.localStorageKey())
             this.setState(JSON.parse(value))
         }
@@ -32,7 +32,7 @@ class PersistentComponent extends Component {
     }
 
     localStorageKey() {
-        if(!this.props.id) {
+        if (!this.props.id) {
             return 'generic#persistent-component'
         }
         return 'persistent-component#' + this.props.id

@@ -12,10 +12,10 @@ class App extends Component {
             <Clock />
           </div>
           <div className="col-sm-3">
-            <Calculator id="first"/>
+            <Calculator id="first" />
           </div>
           <div className="col-sm-3">
-            <Calculator id="second"/>
+            <Calculator id="second" />
           </div>
           <div className="col-sm-3">
             <LocalStorageContent />
